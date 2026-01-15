@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TAREA 1 SESION 5</title>
+    <style>
+        /* Estilo para la marquesina con fondo celeste claro */
+        marquee {
+            background-color: #ADD8E6; /* Color celeste claro */
+            padding: 10px;
+        }
+        /* Estilo de los botones */
+        .boton {
+            background-color: #ADD8E6; /* Celeste claro */
+            color: white; /* Texto blanco */
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            width: 150px;
+            box-sizing: border-box;
+        }
+        .boton:hover {
+            background-color: #87CEFA; /* Color más oscuro de celeste al pasar el ratón */
+        }
+        /* Estilo de la sección de botones */
+        .botones-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+            gap: 20px;
+            justify-items: center;
+            margin: 20px 0;
+        }
+        /* Estilo para la imagen */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Marquee con fondo celeste claro -->
+    <marquee>
+        <h1 align="center" style="margin: 0;">UNIVERSIDAD PRIVADA DE TRUJILLO</h1>
+    </marquee>
+
+    <br>
+
+    <!-- Imagen centrada -->
+    <div align="center">
+        <img src="https://uprit.edu.pe/favicon/apple-touch-icon.png" width="200">
+    </div>
+
+    <br>
+
+    <!-- Lista de integrantes -->
+    <h2 align="center">INTEGRANTES:</h2>
+    <h2 align="center">VEGAS VIERA EMANUEL ALEXY</h2>
+    <h2 align="center">NIMA CARMEN JHAN PIER</h2>
+    <h2 align="center">BAYONA GUTIERREZ GINA DEL PILAR</h2>
+
+    <hr>
+
+    <!-- Sección de botones para acceder a los archivos HTML -->
+    <div class="botones-container">
+        <button class="boton" onclick="window.location.href='1_adolesc.html'">Adolescente</button>
+        <button class="boton" onclick="window.location.href='2_calificacion.html'">Calificación</button>
+        <button class="boton" onclick="window.location.href='3_nom_mes.html'">Meses del Año</button>
+        <button class="boton" onclick="window.location.href='4_operar_dos_num.html'">Operaciones Matemáticas</button>
+        <button class="boton" onclick="window.location.href='5_año_bisiesto.html'">Año Bisiesto</button>
+        <button class="boton" onclick="window.location.href='6_usuario_contraseña.html'">Usuario y Contraseña</button>
+        <button class="boton" onclick="window.location.href='7_valor_compra.html'">Valor de Compra</button>
+        <button class="boton" onclick="window.location.href='8_dados.html'">Juego de Dados</button>
+        <button class="boton" onclick="window.location.href='9_clima.html'">Clima</button>
+    </div>
+
+</body>
+</html>

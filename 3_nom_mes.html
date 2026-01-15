@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meses del Año</title>
+</head>
+<body>
+    <h1>Meses del Año</h1>
+    Número del mes (1-12): <input type="number" id="mes"><br>
+    <button onclick="mostrarMes()">Mostrar mes</button>
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarMes() {
+            let mes = parseInt(document.getElementById("mes").value);
+            let mensaje = "";
+
+            switch(mes) {
+                case 1:
+                    mensaje = "Enero";
+                    break;
+                case 2:
+                    mensaje = "Febrero";
+                    break;
+                case 3:
+                    mensaje = "Marzo";
+                    break;
+                case 4:
+                    mensaje = "Abril";
+                    break;
+                case 5:
+                    mensaje = "Mayo";
+                    break;
+                case 6:
+                    mensaje = "Junio";
+                    break;
+                case 7:
+                    mensaje = "Julio";
+                    break;
+                case 8:
+                    mensaje = "Agosto";
+                    break;
+                case 9:
+                    mensaje = "Septiembre";
+                    break;
+                case 10:
+                    mensaje = "Octubre";
+                    break;
+                case 11:
+                    mensaje = "Noviembre";
+                    break;
+                case 12:
+                    mensaje = "Diciembre";
+                    break;
+                default:
+                    mensaje = "Número de mes no válido";
+                    break;
+            }
+
+            document.getElementById("resultado").innerText = mensaje;
+        }
+    </script>
+</body>
+</html>

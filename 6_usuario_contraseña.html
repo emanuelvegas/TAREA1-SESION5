@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio de sesión</title>
+</head>
+<body>
+    <h1>Inicio de sesión</h1>
+    Usuario: <input type="text" id="usuario"><br>
+    Contraseña: <input type="password" id="contraseña"><br>
+    <button onclick="iniciarSesion()">Iniciar sesión</button>
+    <p id="resultado"></p>
+
+    <script>
+        function iniciarSesion() {
+            let usuario = document.getElementById("usuario").value;
+            let contraseña = document.getElementById("contraseña").value;
+            let mensaje = "";
+
+            // Supón que el usuario es "admin" y la contraseña es "1234"
+            if (usuario === "vegas" && contraseña === "1234") {
+                mensaje = "Inicio de sesión correcto";
+            } else {
+                mensaje = "Nombre de usuario o contraseña incorrectos";
+            }
+
+            document.getElementById("resultado").innerText = mensaje;
+        }
+    </script>
+</body>
+</html>

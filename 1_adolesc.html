@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Determinar Adolescente</title>
+</head>
+<body>
+    <h1>Determinar Adolescente</h1>
+    Edad: <input type="number" id="edad"><br>
+    <button onclick="determinarAdolescente()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function determinarAdolescente() {
+            let edad = parseInt(document.getElementById("edad").value);
+            let mensaje = "";
+
+            if (edad >= 13 && edad <= 17) {
+                mensaje = "Es adolescente.";
+            } else {
+                mensaje = "No es adolescente.";
+            }
+
+            document.getElementById("resultado").innerText = mensaje;
+        }
+    </script>
+</body>
+</html>

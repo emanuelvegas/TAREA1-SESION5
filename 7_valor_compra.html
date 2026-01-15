@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compra Farmacia</title>
+</head>
+<body>
+    <h1>Calcular compra</h1>
+    Valor de compra: <input type="number" id="compra"><br>
+    Pago: <select id="pago">
+        <option value="contado">Contado</option>
+        <option value="tarjeta">Tarjeta</option>
+    </select><br>
+    <button onclick="calcularCompra()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularCompra() {
+            let compra = parseFloat(document.getElementById("compra").value);
+            let pago = document.getElementById("pago").value;
+            let total;
+
+            if (pago === "contado") {
+                total = compra - (compra * 0.05); // Descuento del 5%
+                mensaje = "Descuento aplicado. Total a pagar: " + total;
+            } else if (pago === "tarjeta") {
+                total = compra + (compra * 0.03); // Recargo del 3%
+                mensaje = "Recargo aplicado. Total a pagar: " + total;
+            }
+
+            document.getElementById("resultado").innerText = mensaje;
+        }
+    </script>
+</body>
+</html>

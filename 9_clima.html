@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temperatura y clima</title>
+</head>
+<body>
+    <h1>Determinar clima</h1>
+    Temperatura en grados Celsius: <input type="number" id="temp"><br>
+    <button onclick="determinarClima()">Determinar clima</button>
+    <p id="resultado"></p>
+
+    <script>
+        function determinarClima() {
+            let temp = parseFloat(document.getElementById("temp").value);
+            let mensaje = "";
+
+            if (temp <= 10) {
+                mensaje = "Clima: Frío";
+            } else if (temp > 10 && temp <= 20) {
+                mensaje = "Clima: Nublado";
+            } else if (temp > 20 && temp <= 30) {
+                mensaje = "Clima: Caluroso";
+            } else {
+                mensaje = "Clima: Tropical";
+            }
+
+            document.getElementById("resultado").innerText = mensaje;
+        }
+    </script>
+</body>
+</html>
